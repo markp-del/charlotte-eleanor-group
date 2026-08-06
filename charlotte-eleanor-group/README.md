@@ -2,6 +2,8 @@
 
 Consumer-first site for **www.charlotteeleanor.co.uk**: clients book a mobile hairdresser; franchising, education and investors sit behind. Burgundy/gold/champagne theme, no build tools.
 
+> **August 2026 SEO build:** every absolute URL now points at `www.charlotteeleanor.co.uk` (previously the files carried `charlotteeleanorgroup.uk`, which serves only a holding page — that mismatch could have stopped Google indexing the live site). Eleven new pages target the franchise-recruitment and local-search keywords; the franchise page now carries FAQ schema and the corrected 8% + 2% fee structure.
+
 ## Pages
 
 | Path | Purpose |
@@ -10,8 +12,12 @@ Consumer-first site for **www.charlotteeleanor.co.uk**: clients book a mobile ha
 | `/services/` | Full service & guide-price list |
 | `/bridal/` | Bridal & events (premium mobile niche) |
 | `/book/` | Booking: request form now, SaaS booking button ready to switch on |
+| `/areas/` + `/areas/{flintshire,denbighshire,conwy,wrexham}/` | Local SEO: county pages for clients ("mobile hairdresser flintshire" etc.) |
 | `/education/` | Education-first page for Clwydian Academy (links out) |
-| `/franchise/` `/scaling/` | The franchise offer and the franchisee ladder |
+| `/franchise/` | The franchise offer — targets "mobile hairdressing franchise UK" (an unowned search) + FAQ schema |
+| `/franchise/north-wales/` + `/franchise/{county}/` | Franchise territory pages — "hairdressing franchise wales/wrexham" etc. |
+| `/franchise/going-mobile/` | "Rent a chair vs going alone vs franchise" — captures stylists researching self-employment |
+| `/scaling/` | The franchisee ladder |
 | `/about/` `/investors/` `/contact/` | Group, governance, plan-on-request |
 
 ## Switching on online booking (when Jobber is live)
@@ -21,18 +27,24 @@ In `book/index.html`, find the section `id="online-booking"`:
 2. Replace `href="#"` with your Jobber client-booking URL.
 That's it — the "Open the diary" panel appears above the request form. You can also point every "Book now" button straight at the same URL later (search for `/book/`).
 
-## Publish
+## Publish (GitHub upload)
 
-1. GitHub: upload this `charlotte-eleanor-group` folder into your `charlotte-eleanor-group` repository.
-2. Vercel: Add New → Project → import that repo → set **Root Directory** to `charlotte-eleanor-group` → Deploy.
-3. Domain: project Settings → Domains → add `www.charlotteeleanor.co.uk` + apex redirect. Vercel shows the DNS records to add at Namecheap.
+1. GitHub: upload the **contents of this `charlotte-eleanor-group` folder** into your repository (replacing the old files; the new folders — `areas/`, `franchise/north-wales/` etc. — must come with it).
+2. Your host (Vercel or GitHub Pages) redeploys automatically from the repo. No build step — these are plain HTML files.
+3. The live domain stays `www.charlotteeleanor.co.uk`. No DNS changes are needed for this update.
 
 ## ⚠️ DNS warning — protect your email
 
-`charlotteeleanor.co.uk` carries no email, so its DNS is safe to change freely. But if you ever point `charlotteeleanorgroup.uk` here too, remember that domain runs your email: only touch the website `A` (@) and `CNAME` (www) records — **never MX or SPF/DKIM TXT records**.
+`charlotteeleanorgroup.uk` runs your email. At Namecheap, only add/replace the website `A` (@) and `CNAME` (www) records Vercel asks for. **Never touch MX records or SPF/DKIM TXT records** — those are your email. If unsure, do it with Claude in the browser.
 
-## After launch
+## After this upload — 20 minutes that switch the SEO on
 
-- Search Console: add the domain property (DNS TXT at Namecheap) and submit `https://www.charlotteeleanor.co.uk/sitemap.xml`.
-- The campaign photography is iStock — make sure the standard licence for each image is purchased under your account before the site goes live, and swap in your own shoots over time.
-- Earnings figures on the franchise pages carry "illustrative projection" disclaimers; keep them.
+1. **Search Console** (search.google.com/search-console): add property `charlotteeleanor.co.uk` (Domain type), verify via DNS TXT at Namecheap, then submit `https://www.charlotteeleanor.co.uk/sitemap.xml`. The site is not yet in Google's index — this is what fixes that.
+2. **Google Business Profile**: follow `GBP-setup-guide` in the *google business pack — charlotte eleanor* folder (service-area business, hidden address, all four counties).
+3. **Bing Places + Apple Business Connect**: both free, both import/verify quickly.
+
+## Notes
+
+- Earnings figures on the franchise pages carry "illustrative projection" disclaimers; keep them — ASA rules on franchise earnings claims are strict.
+- Replace the strand artwork with real photography as it's shot — hero and split sections are ready for images.
+- Ongoing fees are **8% royalty + 2% marketing levy (10% total)** — stated consistently sitewide; don't reintroduce the old "10% royalty" wording.
