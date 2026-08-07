@@ -2,7 +2,7 @@
 
 Consumer-first site for **www.charlotteeleanor.co.uk**: clients book a mobile hairdresser; franchising, education and investors sit behind. Burgundy/gold/champagne theme, no build tools.
 
-> **August 2026 SEO build:** every absolute URL now points at `www.charlotteeleanor.co.uk` (previously the files carried `charlotteeleanorgroup.uk`, which serves only a holding page — that mismatch could have stopped Google indexing the live site). Eleven new pages target the franchise-recruitment and local-search keywords; the franchise page now carries FAQ schema and the corrected 8% + 2% fee structure.
+> **August 2026 — photographic original + SEO layer (v2, 7 Aug):** the site is the original photographic design (photo hero, service tiles, education/franchise bands, gents split) with the SEO build merged on top: eleven new pages for franchise-recruitment and local-search keywords, FAQ schema and the corrected 8% + 2% fees on the franchise page, Areas navigation, and county-linked homepage section. All photography lives in `assets/img/` in this repo — the folder on the desktop named `ceg` is the original master copy; never deploy from an older folder that lacks the `.jpg` files.
 
 ## Pages
 
