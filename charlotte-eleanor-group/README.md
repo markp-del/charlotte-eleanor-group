@@ -2,6 +2,8 @@
 
 Consumer-first site for **www.charlotteeleanor.co.uk**: clients book a mobile hairdresser; franchising, education and investors sit behind. Burgundy/gold/champagne theme, no build tools.
 
+> **⬆ Not yet uploaded (8 Aug):** every page now carries the Facebook page link — in the footer under Contact and in the `sameAs` of the Organization and HairSalon schema — and every `HairSalon` entity is renamed to exactly **Charlotte Eleanor** (the descriptive name moved to `alternateName`) so the site, the Google Business Profile and the Facebook page all state one identical business name. Upload the folder to GitHub when convenient; nothing breaks in the meantime.
+>
 > **August 2026 — photographic original + SEO layer (v2, 7 Aug):** the site is the original photographic design (photo hero, service tiles, education/franchise bands, gents split) with the SEO build merged on top: eleven new pages for franchise-recruitment and local-search keywords, FAQ schema and the corrected 8% + 2% fees on the franchise page, Areas navigation, and county-linked homepage section. All photography lives in `assets/img/` in this repo — the folder on the desktop named `ceg` is the original master copy; never deploy from an older folder that lacks the `.jpg` files.
 
 ## Pages
