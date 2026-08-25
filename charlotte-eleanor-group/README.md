@@ -13,7 +13,8 @@ Consumer-first site for **www.charlotteeleanor.co.uk**: clients book a mobile ha
 | `/services/` | Full service & guide-price list |
 | `/bridal/` | Bridal & events (premium mobile niche) |
 | `/book/` | Booking: request form now, online booking button ready to switch on |
-| `/areas/` + `/areas/{flintshire,denbighshire,conwy,wrexham}/` | Local SEO: county pages for clients ("mobile hairdresser flintshire" etc.) |
+| `/areas/` | The service area — the 36 villages of the CH7 round, client-facing |
+| `/areas/mold/` | Local SEO landing page: "mobile hairdresser Mold" and the CH7 villages |
 | `/education/` | Education-first page for Clwydian Academy (links out) |
 | `/franchise/` | The franchise offer — targets "mobile hairdressing franchise UK" (an unowned search) + FAQ schema |
 | `/franchise/north-wales/` + `/franchise/{county}/` | Franchise territory pages — "hairdressing franchise wales/wrexham" etc. |
@@ -49,3 +50,22 @@ That's it — the "Open the diary" panel appears above the request form. You can
 - Earnings figures on the franchise pages carry "illustrative projection" disclaimers; keep them — ASA rules on franchise earnings claims are strict.
 - Replace the strand artwork with real photography as it's shot — hero and split sections are ready for images.
 - Ongoing fees are **8% royalty + 2% marketing levy (10% total)** — stated consistently sitewide; don't reintroduce the old "10% royalty" wording.
+
+## Prices and areas — where the truth lives
+
+Prices on `/services/` and `/areas/mold/` are a mirror of the booking system's
+`src/catalogue.js`, and the village list is a mirror of its `src/places.js`.
+**Change them there first, then bring the site into line** — never the other way
+round, or the site quotes a price the booking form will not honour.
+
+Two rules that are easy to lose:
+
+- Every published figure is a **from** price. Length and thickness are added by
+  the booking form, which quotes exactly before the client confirms.
+- **Colour prices do not include the wash and blow-dry** (unbundled 24 Aug 2026).
+  Wherever a colour price appears, the line saying so has to appear beside it.
+- **Colour correction is never a bookable price** — "from £50, quoted in person".
+
+Client-facing pages name CH7 villages only, per the CH7-first rule. The
+`/franchise/` section is the exception: territories there are county-level,
+because a territory is what a franchisee buys.
