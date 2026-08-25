@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://www.charlotteeleanor.co.uk/</loc><lastmod>2026-08-25</lastmod><priority>1.0</priority></url>
-  <url><loc>https://www.charlotteeleanor.co.uk/services/</loc><lastmod>2026-08-25</lastmod><priority>0.7</priority></url>
-  <url><loc>https://www.charlotteeleanor.co.uk/bridal/</loc><lastmod>2026-08-25</lastmod><priority>0.7</priority></url>
+  <url><loc>https://www.charlotteeleanor.co.uk/services/</loc><lastmod>2026-08-25</lastmod><priority>0.9</priority></url>
+  <url><loc>https://www.charlotteeleanor.co.uk/services/cuts-and-styling/</loc><lastmod>2026-08-25</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.charlotteeleanor.co.uk/services/colour-and-balayage/</loc><lastmod>2026-08-25</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.charlotteeleanor.co.uk/services/perms-and-treatments/</loc><lastmod>2026-08-25</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.charlotteeleanor.co.uk/bridal/</loc><lastmod>2026-08-25</lastmod><priority>0.8</priority></url>
   <url><loc>https://www.charlotteeleanor.co.uk/book/</loc><lastmod>2026-08-25</lastmod><priority>0.8</priority></url>
   <url><loc>https://www.charlotteeleanor.co.uk/areas/</loc><lastmod>2026-08-25</lastmod><priority>0.9</priority></url>
   <url><loc>https://www.charlotteeleanor.co.uk/areas/mold/</loc><lastmod>2026-08-25</lastmod><priority>0.9</priority></url>
