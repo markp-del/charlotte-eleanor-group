@@ -1,13 +1,65 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "redirects": [
-    { "source": "/areas/flintshire", "destination": "/areas/", "permanent": true },
-    { "source": "/areas/flintshire/:path*", "destination": "/areas/", "permanent": true },
-    { "source": "/areas/denbighshire", "destination": "/areas/", "permanent": true },
-    { "source": "/areas/denbighshire/:path*", "destination": "/areas/", "permanent": true },
-    { "source": "/areas/conwy", "destination": "/areas/", "permanent": true },
-    { "source": "/areas/conwy/:path*", "destination": "/areas/", "permanent": true },
-    { "source": "/areas/wrexham", "destination": "/areas/", "permanent": true },
-    { "source": "/areas/wrexham/:path*", "destination": "/areas/", "permanent": true }
+    {
+      "source": "/areas/flintshire",
+      "destination": "/areas/",
+      "permanent": true
+    },
+    {
+      "source": "/areas/flintshire/",
+      "destination": "/areas/",
+      "permanent": true
+    },
+    {
+      "source": "/areas/flintshire/:path+",
+      "destination": "/areas/",
+      "permanent": true
+    },
+    {
+      "source": "/areas/denbighshire",
+      "destination": "/areas/",
+      "permanent": true
+    },
+    {
+      "source": "/areas/denbighshire/",
+      "destination": "/areas/",
+      "permanent": true
+    },
+    {
+      "source": "/areas/denbighshire/:path+",
+      "destination": "/areas/",
+      "permanent": true
+    },
+    {
+      "source": "/areas/conwy",
+      "destination": "/areas/",
+      "permanent": true
+    },
+    {
+      "source": "/areas/conwy/",
+      "destination": "/areas/",
+      "permanent": true
+    },
+    {
+      "source": "/areas/conwy/:path+",
+      "destination": "/areas/",
+      "permanent": true
+    },
+    {
+      "source": "/areas/wrexham",
+      "destination": "/areas/",
+      "permanent": true
+    },
+    {
+      "source": "/areas/wrexham/",
+      "destination": "/areas/",
+      "permanent": true
+    },
+    {
+      "source": "/areas/wrexham/:path+",
+      "destination": "/areas/",
+      "permanent": true
+    }
   ]
 }
