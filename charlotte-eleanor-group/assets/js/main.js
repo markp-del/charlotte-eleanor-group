@@ -76,3 +76,71 @@
     });
   }
 })();
+
+
+/* ---- Cookie consent + Meta Pixel (only fires after consent) ---- */
+(function () {
+  var PIXEL_ID = "2287597405398523";
+  var KEY = "ce-consent";
+
+  function readChoice() {
+    try { return localStorage.getItem(KEY); } catch (e) { return null; }
+  }
+  function saveChoice(v) {
+    try { localStorage.setItem(KEY, v); } catch (e) {}
+  }
+
+  function loadPixel() {
+    if (window.fbq) return;
+    var n = (window.fbq = function () {
+      n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+    });
+    if (!window._fbq) window._fbq = n;
+    n.push = n;
+    n.loaded = true;
+    n.version = "2.0";
+    n.queue = [];
+    var t = document.createElement("script");
+    t.async = true;
+    t.src = "https://connect.facebook.net/en_US/fbevents.js";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(t, s);
+    window.fbq("init", PIXEL_ID);
+    window.fbq("track", "PageView");
+  }
+
+  function showBanner() {
+    if (document.querySelector(".ce-consent")) return;
+    var el = document.createElement("div");
+    el.className = "ce-consent";
+    el.setAttribute("role", "dialog");
+    el.setAttribute("aria-label", "Cookie choices");
+    el.innerHTML =
+      '<p class="ce-consent__text">We use cookies to measure how well our advertising works. ' +
+      'Nothing is set unless you agree. <a href="/privacy/">How we use your data</a>.</p>' +
+      '<div class="ce-consent__actions">' +
+      '<button type="button" class="ce-consent__btn ce-consent__btn--ghost" data-consent="declined">Decline</button>' +
+      '<button type="button" class="ce-consent__btn" data-consent="granted">Accept</button>' +
+      "</div>";
+    document.body.appendChild(el);
+    el.addEventListener("click", function (ev) {
+      var btn = ev.target.closest ? ev.target.closest("[data-consent]") : null;
+      if (!btn) return;
+      var choice = btn.getAttribute("data-consent");
+      saveChoice(choice);
+      if (el.parentNode) el.parentNode.removeChild(el);
+      if (choice === "granted") loadPixel();
+    });
+  }
+
+  var choice = readChoice();
+  if (choice === "granted") {
+    loadPixel();
+  } else if (choice !== "declined") {
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", showBanner);
+    } else {
+      showBanner();
+    }
+  }
+})();
