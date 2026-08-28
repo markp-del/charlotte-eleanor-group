@@ -1,6 +1,9 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "redirects": [
+    { "source": "/book", "destination": "https://book.charlotteeleanor.co.uk/", "permanent": true },
+    { "source": "/book/", "destination": "https://book.charlotteeleanor.co.uk/", "permanent": true },
+    { "source": "/book/:path+", "destination": "https://book.charlotteeleanor.co.uk/", "permanent": true },
     {
       "source": "/areas/flintshire",
       "destination": "/areas/",
